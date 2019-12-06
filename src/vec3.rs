@@ -26,12 +26,8 @@ impl Vector3 {
      ]}     
   }
 
-  pub fn dot(&self, v:Vector3) -> Vector3 { 
-      Vector3 { e: [ 
-        self.x() * v.x(),
-        self.y() * v.y(),
-        self.z() * v.z()
-     ]}     
+  pub fn dot(&self, v:Vector3) -> f32 { 
+      self.x() * v.x() + self.y() * v.y() + self.z() * v.z()
   }
 
   pub fn squared_length(&self) -> f32 { self.x() * self.x() + self.y() * self.y() + self.z() * self.z() }
